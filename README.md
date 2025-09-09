@@ -20,6 +20,7 @@ Sigmoid Risk Model: An advanced, S-shaped curve that provides a more realistic r
 The combined score results in one of three actions: ALLOW, VERIFY with biometrics, or BLOCK the login attempt.
 
 👥 Team HACKEYS
+
 HOHIN J
 
 KABILAN MOHANRAJ
