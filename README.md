@@ -40,4 +40,4 @@ Core Algorithm: Haversine Formula, Sigmoid Function
 APIs: Browser Geolocation API
 
 🙏 Acknowledgments
-A huge thank you to the Department of Information Technology, Thiagarajar College of Engineering, Madurai, and the IEEE CIS Outreach Program for organizing this incredible event. We are also immensely grateful for the guidance and support from our mentors, Dr. Sindhu V and Dr. Aravind Vishnu.
+A huge thanks to the IEEE CIS Outreach Program for organizing this incredible event. We are also immensely grateful for the guidance and support from our mentors, Dr. Sindhu V and Dr. Aravind Vishnu.
