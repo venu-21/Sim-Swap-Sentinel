@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackeys Bank - Secure Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-container">
+        <div class="login-header">
+            <img src="logo.jpg" alt="Sentinel Bank Logo" class="logo">
+            <h1>SIM Swap Sentinel</h1>
+            <p>Secure Client Login</p>
+        </div>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="e.g., safe_user, fraud_user, verify_user" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" value="fakepassword" required>
+            </div>
+            <button type="submit" id="login-btn">Login</button>
+            <div id="status-message" class="status"></div>
+        </form>
+    </div>
+
+    <div id="biometric-overlay" class="overlay hidden">
+        <div id="biometric-modal" class="modal">
+            <div class="modal-header">
+                <h3>Biometric Verification 👆</h3>
+            </div>
+            <div class="modal-body">
+                <p>Your login shows unusual activity. Please verify your identity to continue.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="deny-btn">Deny</button>
+                <button type="button" id="approve-btn">Approve</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

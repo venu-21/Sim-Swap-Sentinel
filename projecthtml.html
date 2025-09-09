@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIM Swap Sentinel - Interactive Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Company Logo">
+        </div>
+
+        <h1>SIM Swap Sentinel</h1>
+        <p>Interactive threat scoring based on your data.</p>
+
+        <div class="form-group">
+            <label>1. Upload Your Safe Zones (.json file)</label>
+            <div class="file-upload-wrapper">
+                <input type="file" id="safeZonesFile" accept=".json">
+                <label for="safeZonesFile" class="file-upload-btn">Choose File</label>
+                <span id="fileName" class="file-name">No file chosen</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="simDate">2. Enter SIM Activation Date</label>
+            <input type="date" id="simDate">
+        </div>
+        
+        <div class="form-group">
+            <label>3. Enter Your Current Location</label> 
+            <div class="location-input-row"> <button id="getLocationBtn" class="location-btn" title="Get Live Location">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                </button>
+                <span class="location-btn-text">Get Live Location</span> </div>
+            <input type="text" id="latitude" placeholder="Current Latitude">
+            <input type="text" id="longitude" placeholder="Current Longitude">
+        </div>
+
+        <button id="calculateBtn">Calculate Threat Score</button>
+
+        <div id="result" class="result-box">
+            <h2>Result</h2>
+            <div class="risk-meter-container">
+                <div id="risk-meter-fill" class="risk-meter-fill"></div>
+            </div>
+            <p><strong>Calculated Threat Score:</strong> <span id="score">---</span></p>
+            <p><strong>Decision:</strong> <span id="decision">---</span></p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

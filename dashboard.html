@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sentinel Bank</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <main class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="header-logo">
+                <img src="logo.jpg" alt="Sentinel Bank Logo">
+                <h2>Dashboard</h2>
+            </div>
+            <div class="user-profile">
+                <span>Welcome, User</span>
+                <i class="fa-solid fa-user-circle"></i>
+            </div>
+        </header>
+        <section class="dashboard-grid">
+            <div class="card account-balance">
+                <div class="card-icon"><i class="fa-solid fa-wallet"></i></div>
+                <h3>Current Balance</h3>
+                <p class="balance">$24,860.55</p>
+            </div>
+            <a href="#" class="card action-card">
+                <div class="card-icon"><i class="fa-solid fa-paper-plane"></i></div>
+                <h3>Make a Transfer</h3>
+                <p>Send money securely</p>
+            </a>
+            <a href="#" class="card action-card">
+                <div class="card-icon"><i class="fa-solid fa-receipt"></i></div>
+                <h3>View Statements</h3>
+                <p>Check your history</p>
+            </a>
+            <a href="#" class="card action-card">
+                <div class="card-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <h3>Our Services</h3>
+                <p>Explore cards & loans</p>
+            </a>
+            <div class="card recent-activity">
+                <h3>Recent Activity</h3>
+                <ul>
+                    <li><span class="activity-desc">Grocery Store</span><span class="activity-amount expense">-$85.40</span></li>
+                    <li><span class="activity-desc">Paycheck Deposit</span><span class="activity-amount income">+$2,500.00</span></li>
+                    <li><span class="activity-desc">Online Shopping</span><span class="activity-amount expense">-$124.99</span></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

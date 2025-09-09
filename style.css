@@ -1,0 +1,251 @@
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@700&family=Roboto:wght@400;500;700&display=swap');
+
+/* --- Color Theme Variables --- */
+:root {
+    --bg-color: rgb(9, 3, 40);
+    --container-bg: #5a56ba;
+    --primary-accent: #2c8fe6;
+    --primary-accent-hover: #2980b9;
+    --heading-text: #fdfdfd;
+    --body-text: #1b1841;
+    --border-color: #dfe6e9;
+    --allow-color: #2ecc71;
+    --verify-color: #f39c12;
+    --block-color: #e74c3c;
+}
+
+/* --- Global Styles & Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--body-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* --- Main Application Container --- */
+.container {
+    background: var(--container-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    z-index: 1;
+}
+
+/* --- Logo Styling --- */
+.logo-container {
+    margin-bottom: 25px;
+}
+.logo-container img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* --- Typography --- */
+h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 2.2em;
+    color: var(--heading-text);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+p {
+    color: #0c0238;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+/* --- Form Styling --- */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--body-text);
+}
+.label-with-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px; /* Adjusted to prevent double margin from .form-group label */
+}
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 8px; /* Applied to inputs directly */
+}
+input:focus {
+    outline: none;
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.25);
+}
+.lat-long-group {
+    display: flex;
+    gap: 12px;
+}
+.lat-long-group input {
+    flex: 1;
+}
+
+/* --- Custom File Input --- */
+.file-upload-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+.file-upload-wrapper input[type="file"] {
+    position: absolute;
+    left: -9999px;
+}
+.file-upload-btn {
+    background-color: var(--primary-accent);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+.file-upload-btn:hover {
+    background-color: var(--primary-accent-hover);
+}
+.file-name {
+    margin-left: 15px;
+    font-style: italic;
+    color: #0c0238;
+    opacity: 0.8;
+}
+
+/* --- Buttons --- */
+#calculateBtn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+#calculateBtn:hover {
+    background-color: var(--primary-accent-hover);
+    transform: translateY(-2px);
+}
+.location-input-row { /* New style for aligning button and text */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon button and text */
+    margin-top: 8px; /* Space below the main label */
+    margin-bottom: 15px; /* Space before the lat/long inputs */
+}
+.location-btn {
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    width: 36px; /* Slightly larger for better icon visibility */
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex-shrink: 0; /* Prevents button from shrinking */
+}
+.location-btn:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+.location-btn-text { /* Style for the new descriptive text */
+    color: var(--body-text);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+/* --- Result Box & Risk Meter --- */
+.result-box {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    border: 1px solid var(--border-color);
+    background-color: #f8f9fa;
+}
+.result-box h2 {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    color: var(--body-text);
+}
+.result-box p {
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: var(--body-text);
+}
+.risk-meter-container {
+    width: 100%;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 8px 0 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.risk-meter-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, var(--allow-color), var(--verify-color), var(--block-color));
+    transition: width 0.5s ease-in-out;
+}
+
+/* --- Background Design Elements --- */
+body::before,
+body::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(80px);
+}
+body::before {
+    width: 350px;
+    height: 350px;
+    background-color: var(--container-bg);
+    top: -150px;
+    left: -150px;
+}
+body::after {
+    width: 300px;
+    height: 300px;
+    background-color: var(--primary-accent);
+    bottom: -120px;
+    right: -150px;
+}
